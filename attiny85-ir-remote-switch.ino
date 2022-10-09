@@ -5,7 +5,7 @@
 #define IR_LEARN_SW 3
 #define IR_LEARN_LED 4
 
-#define OUT_PIN 9
+#define OUT_PIN 1
 
 byte outState = LOW;
 
@@ -20,6 +20,7 @@ void setup() {
   pinMode(IR_LEARN_LED, OUTPUT);  
   pinMode(OUT_PIN,      OUTPUT); 
   digitalWrite(IR_LEARN_LED, LOW);
+  ledBlink(1, 100, LOW);
   
   if(digitalRead(IR_LEARN_SW)==LOW){
     learn = true;  
@@ -27,6 +28,7 @@ void setup() {
     //Serial.println("attivo learn mode!");
     IrReceiver.begin(IR_RECEIVE_PIN);
   }else{
+    learn = false;
     ir_code = EEPROM.read(addr);
     //Serial.print("leggo ir_code: ");
     //Serial.println(ir_code);
