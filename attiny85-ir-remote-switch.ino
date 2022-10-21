@@ -2,10 +2,10 @@
 #include <EEPROM.h>
 
 #define IR_RECEIVE_PIN 2
-#define IR_LEARN_SW 3
+#define IR_LEARN_SW 1
 #define IR_LEARN_LED 4
 
-#define OUT_PIN 1
+#define OUT_PIN 3
 
 byte outState = LOW;
 
