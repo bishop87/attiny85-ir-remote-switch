@@ -1,0 +1,4 @@
+- selezionare come scheda: "ATtiny25/45/85 (No bootloader)"
+- selezionare come programmatore: "Arduino as ISP"
+- la prima volta premere: Scrivi il bootloader (questo non scrive realmente il bootloader, ma imposta i fusibili interni per operare a 8Mhz)
+- a questo punto si può caricare lo sketch
